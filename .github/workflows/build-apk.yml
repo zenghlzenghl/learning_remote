@@ -38,44 +38,16 @@ jobs:
     - name: Build Debug APK
       run: ./gradlew assembleDebug --no-daemon
       
+    - name: Find APK file
+      id: find_apk
+      run: |
+        echo "APK_PATH=$(find app/build -name '*.apk' -type f | head -1)" >> $GITHUB_OUTPUT
+        ls -la app/build/outputs/apk/debug/
+        
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: learning-remote-debug-apk
-        path: app/build/outputs/apk/debug/app-debug.apk
+        path: ${{ steps.find_apk.outputs.APK_PATH }}
         retention-days: 30
-        
-    - name: Create Release
-      if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-      uses: softprops/action-gh-release@v2
-      with:
-        files: app/build/outputs/apk/debug/app-debug.apk
-        tag_name: v${{ github.run_number }}
-        name: Release v${{ github.run_number }}
-        body: |
-          ## Learning Remote App - 自动构建版本
-          
-          ### 📱 安装说明
-          1. 下载 `app-debug.apk` 文件
-          2. 传送到手机上
-          3. 在手机设置中允许"安装未知来源应用"
-          4. 点击 APK 文件安装
-          
-          ### 🔧 使用方法
-          1. 打开 APP
-          2. 输入 ESP32-S3 的 IP 地址（查看串口日志获取）
-          3. 输入端口号：8888
-          4. 点击 Connect 连接
-          
-          ### 📋 功能特性
-          - ✅ 红外遥控信号学习与发射
-          - ✅ 无线射频信号学习与发射  
-          - ✅ 信号分类存储管理
-          - ✅ 实时解码显示
-          
-          ---
-          **构建时间**: ${{ github.event.head_commit.timestamp }}
-          **提交者**: ${{ github.actor }}
-          **提交哈希**: ${{ github.sha }}
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        if-no-files-found: error
