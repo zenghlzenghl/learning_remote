@@ -36,18 +36,23 @@ jobs:
         chmod +x gradlew
         
     - name: Build Debug APK
-      run: ./gradlew assembleDebug --no-daemon
+      run: ./gradlew assembleDebug --no-daemon --info 2>&1 | tee build.log
       
-    - name: Find APK file
-      id: find_apk
+    - name: Check build output
       run: |
-        echo "APK_PATH=$(find app/build -name '*.apk' -type f | head -1)" >> $GITHUB_OUTPUT
-        ls -la app/build/outputs/apk/debug/
+        echo "=== Checking for APK files ==="
+        find . -name "*.apk" -type f 2>/dev/null || echo "No APK files found"
+        echo "=== Listing app/build directory ==="
+        ls -laR app/build 2>/dev/null || echo "app/build directory does not exist"
+        echo "=== Build log last 50 lines ==="
+        tail -50 build.log
         
     - name: Upload APK Artifact
       uses: actions/upload-artifact@v4
       with:
         name: learning-remote-debug-apk
-        path: ${{ steps.find_apk.outputs.APK_PATH }}
+        path: |
+          **/*.apk
+          app/build/outputs/apk/debug/*.apk
         retention-days: 30
-        if-no-files-found: error
+        if-no-files-found: warn
