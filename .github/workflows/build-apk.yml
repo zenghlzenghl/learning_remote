@@ -8,6 +8,7 @@ on:
       - 'build.gradle'
       - 'app/build.gradle'
       - 'gradle/**'
+      - '.github/workflows/**'
   workflow_dispatch:
 
 jobs:
@@ -29,9 +30,11 @@ jobs:
       with:
         gradle-version: 8.2
         
-    - name: Grant execute permission for gradlew
-      run: chmod +x gradlew
-      
+    - name: Generate Gradle Wrapper
+      run: |
+        gradle wrapper --gradle-version 8.2
+        chmod +x gradlew
+        
     - name: Build Debug APK
       run: ./gradlew assembleDebug --no-daemon
       
