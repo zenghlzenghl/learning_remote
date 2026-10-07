@@ -1,176 +1,454 @@
-﻿2026-10-07T03:51:59.7541871Z Current runner version: '2.337.0'
-2026-10-07T03:51:59.7563918Z ##[group]Runner Image Provisioner
-2026-10-07T03:51:59.7564554Z Hosted Compute Agent
-2026-10-07T03:51:59.7564974Z Version: 20260901.588
-2026-10-07T03:51:59.7565447Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
-2026-10-07T03:51:59.7565975Z Build Date: 2026-09-01T19:56:44Z
-2026-10-07T03:51:59.7566752Z Worker ID: {ba45537a-94dc-425e-b6f8-45d3787d24ea}
-2026-10-07T03:51:59.7567231Z Azure Region: centralus
-2026-10-07T03:51:59.7567635Z ##[endgroup]
-2026-10-07T03:51:59.7568566Z ##[group]Operating System
-2026-10-07T03:51:59.7569032Z Ubuntu
-2026-10-07T03:51:59.7569412Z 24.04.5
-2026-10-07T03:51:59.7569751Z LTS
-2026-10-07T03:51:59.7570090Z ##[endgroup]
-2026-10-07T03:51:59.7570478Z ##[group]Runner Image
-2026-10-07T03:51:59.7570898Z Image: ubuntu-24.04
-2026-10-07T03:51:59.7571304Z Version: 20260927.320.1
-2026-10-07T03:51:59.7572157Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
-2026-10-07T03:51:59.7573502Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
-2026-10-07T03:51:59.7574142Z ##[endgroup]
-2026-10-07T03:51:59.7574979Z ##[group]GITHUB_TOKEN Permissions
-2026-10-07T03:51:59.7576830Z Contents: read
-2026-10-07T03:51:59.7577247Z Metadata: read
-2026-10-07T03:51:59.7577621Z Packages: read
-2026-10-07T03:51:59.7578033Z ##[endgroup]
-2026-10-07T03:51:59.7579514Z Secret source: Actions
-2026-10-07T03:51:59.7580107Z Cache mode: write
-2026-10-07T03:51:59.7580593Z Prepare workflow directory
-2026-10-07T03:51:59.7824506Z Prepare all required actions
-2026-10-07T03:51:59.7873408Z Getting action download info
-2026-10-07T03:52:00.0579484Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
-2026-10-07T03:52:00.1363538Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
-2026-10-07T03:52:00.7329018Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
-2026-10-07T03:52:00.8597170Z Download action repository 'softprops/action-gh-release@v2' (SHA:3bb12739c298aeb8a4eeaf626c5b8d85266b0e65)
-2026-10-07T03:52:01.2828764Z Complete job name: build
-2026-10-07T03:52:01.3415769Z ##[group]Run actions/checkout@v4
-2026-10-07T03:52:01.3416694Z with:
-2026-10-07T03:52:01.3417093Z   repository: zenghlzenghl/learning_remote
-2026-10-07T03:52:01.3419381Z   token: ***
-2026-10-07T03:52:01.3419733Z   ssh-strict: true
-2026-10-07T03:52:01.3420072Z   ssh-user: git
-2026-10-07T03:52:01.3420467Z   persist-credentials: true
-2026-10-07T03:52:01.3420847Z   clean: true
-2026-10-07T03:52:01.3421327Z   sparse-checkout-cone-mode: true
-2026-10-07T03:52:01.3421743Z   fetch-depth: 1
-2026-10-07T03:52:01.3422216Z   fetch-tags: false
-2026-10-07T03:52:01.3422582Z   show-progress: true
-2026-10-07T03:52:01.3422979Z   lfs: false
-2026-10-07T03:52:01.3423348Z   submodules: false
-2026-10-07T03:52:01.3423719Z   set-safe-directory: true
-2026-10-07T03:52:01.3424121Z   allow-unsafe-pr-checkout: false
-2026-10-07T03:52:01.3424716Z ##[endgroup]
-2026-10-07T03:52:01.4263837Z Syncing repository: zenghlzenghl/learning_remote
-2026-10-07T03:52:01.4265998Z ##[group]Getting Git version info
-2026-10-07T03:52:01.4267310Z Working directory is '/home/runner/work/learning_remote/learning_remote'
-2026-10-07T03:52:01.4268626Z [command]/usr/bin/git version
-2026-10-07T03:52:01.4305636Z git version 2.55.0
-2026-10-07T03:52:01.4320860Z ##[endgroup]
-2026-10-07T03:52:01.4331370Z Temporarily overriding HOME='/home/runner/work/_temp/e126604a-62a5-42f2-82d0-c5b8d8318521' before making global git config changes
-2026-10-07T03:52:01.4332711Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-07T03:52:01.4353494Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/learning_remote/learning_remote
-2026-10-07T03:52:01.4378074Z Deleting the contents of '/home/runner/work/learning_remote/learning_remote'
-2026-10-07T03:52:01.4382840Z ##[group]Initializing the repository
-2026-10-07T03:52:01.4384975Z [command]/usr/bin/git init /home/runner/work/learning_remote/learning_remote
-2026-10-07T03:52:01.4472774Z hint: Using 'master' as the name for the initial branch. This default branch name
-2026-10-07T03:52:01.4474071Z hint: will change to "main" in Git 3.0. To configure the initial branch name
-2026-10-07T03:52:01.4475102Z hint: to use in all of your new repositories, which will suppress this warning,
-2026-10-07T03:52:01.4476069Z hint: call:
-2026-10-07T03:52:01.4476687Z hint:
-2026-10-07T03:52:01.4477257Z hint: 	git config --global init.defaultBranch <name>
-2026-10-07T03:52:01.4477904Z hint:
-2026-10-07T03:52:01.4478503Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
-2026-10-07T03:52:01.4479306Z hint: 'development'. The just-created branch can be renamed via this command:
-2026-10-07T03:52:01.4479963Z hint:
-2026-10-07T03:52:01.4480367Z hint: 	git branch -m <name>
-2026-10-07T03:52:01.4480844Z hint:
-2026-10-07T03:52:01.4481417Z hint: Disable this message with "git config set advice.defaultBranchName false"
-2026-10-07T03:52:01.4482525Z Initialized empty Git repository in /home/runner/work/learning_remote/learning_remote/.git/
-2026-10-07T03:52:01.4488208Z [command]/usr/bin/git remote add origin https://github.com/zenghlzenghl/learning_remote
-2026-10-07T03:52:01.4523190Z ##[endgroup]
-2026-10-07T03:52:01.4524106Z ##[group]Disabling automatic garbage collection
-2026-10-07T03:52:01.4526943Z [command]/usr/bin/git config --local gc.auto 0
-2026-10-07T03:52:01.4551893Z ##[endgroup]
-2026-10-07T03:52:01.4552898Z ##[group]Setting up auth
-2026-10-07T03:52:01.4557612Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-10-07T03:52:01.4581347Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-10-07T03:52:01.4858709Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-10-07T03:52:01.4880067Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-10-07T03:52:01.5037623Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-10-07T03:52:01.5063348Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-10-07T03:52:01.5217217Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
-2026-10-07T03:52:01.5248345Z ##[endgroup]
-2026-10-07T03:52:01.5249241Z ##[group]Fetching the repository
-2026-10-07T03:52:01.5256139Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +b9b693676d0946c9fddeeb10be0d3e3f71655e1d:refs/remotes/origin/main
-2026-10-07T03:52:01.8788521Z From https://github.com/zenghlzenghl/learning_remote
-2026-10-07T03:52:01.8789289Z  * [new ref]         b9b693676d0946c9fddeeb10be0d3e3f71655e1d -> origin/main
-2026-10-07T03:52:01.8793928Z ##[endgroup]
-2026-10-07T03:52:01.8794591Z ##[group]Determining the checkout info
-2026-10-07T03:52:01.8796541Z ##[endgroup]
-2026-10-07T03:52:01.8802346Z [command]/usr/bin/git sparse-checkout disable
-2026-10-07T03:52:01.8854104Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
-2026-10-07T03:52:01.8881663Z ##[group]Checking out the ref
-2026-10-07T03:52:01.8886957Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
-2026-10-07T03:52:01.8956005Z Switched to a new branch 'main'
-2026-10-07T03:52:01.8959223Z branch 'main' set up to track 'origin/main'.
-2026-10-07T03:52:01.8964067Z ##[endgroup]
-2026-10-07T03:52:01.8996049Z [command]/usr/bin/git log -1 --format=%H
-2026-10-07T03:52:01.9014618Z b9b693676d0946c9fddeeb10be0d3e3f71655e1d
-2026-10-07T03:52:01.9729530Z ##[group]Run actions/setup-java@v4
-2026-10-07T03:52:01.9729921Z with:
-2026-10-07T03:52:01.9730111Z   java-version: 17
-2026-10-07T03:52:01.9730310Z   distribution: temurin
-2026-10-07T03:52:01.9730510Z   cache: gradle
-2026-10-07T03:52:01.9730706Z   java-package: jdk
-2026-10-07T03:52:01.9730909Z   check-latest: false
-2026-10-07T03:52:01.9731114Z   server-id: github
-2026-10-07T03:52:01.9731327Z   server-username: GITHUB_ACTOR
-2026-10-07T03:52:01.9731565Z   server-password: GITHUB_TOKEN
-2026-10-07T03:52:01.9731791Z   overwrite-settings: true
-2026-10-07T03:52:01.9732002Z   job-status: success
-2026-10-07T03:52:01.9733799Z   token: ***
-2026-10-07T03:52:01.9733986Z ##[endgroup]
-2026-10-07T03:52:02.1008467Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
-2026-10-07T03:52:02.1013914Z ##[group]Installed distributions
-2026-10-07T03:52:02.1122157Z Resolved Java 17.0.20+1 from tool-cache
-2026-10-07T03:52:02.1122636Z Setting Java 17.0.20+1 as the default
-2026-10-07T03:52:02.1129036Z (node:2091) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-2026-10-07T03:52:02.1129745Z (Use `node --trace-deprecation ...` to show where the warning was created)
-2026-10-07T03:52:02.1131715Z Creating toolchains.xml for JDK version 17 from temurin
-2026-10-07T03:52:02.1189109Z Writing to /home/runner/.m2/toolchains.xml
-2026-10-07T03:52:02.1189418Z 
-2026-10-07T03:52:02.1189540Z Java configuration:
-2026-10-07T03:52:02.1189816Z   Distribution: temurin
-2026-10-07T03:52:02.1190163Z   Version: 17.0.20+1
-2026-10-07T03:52:02.1190540Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
-2026-10-07T03:52:02.1190839Z 
-2026-10-07T03:52:02.1191251Z ##[endgroup]
-2026-10-07T03:52:02.1208346Z Creating settings.xml with server-id: github
-2026-10-07T03:52:02.1235786Z Writing to /home/runner/.m2/settings.xml
-2026-10-07T03:52:02.3245549Z gradle cache is not found
-2026-10-07T03:52:02.3379637Z ##[group]Run chmod +x gradlew
-2026-10-07T03:52:02.3379953Z [36;1mchmod +x gradlew[0m
-2026-10-07T03:52:02.3550403Z shell: /usr/bin/bash -e {0}
-2026-10-07T03:52:02.3550655Z env:
-2026-10-07T03:52:02.3550918Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
-2026-10-07T03:52:02.3551354Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
-2026-10-07T03:52:02.3551662Z ##[endgroup]
-2026-10-07T03:52:02.3663589Z ##[group]Run ./gradlew assembleDebug
-2026-10-07T03:52:02.3663896Z [36;1m./gradlew assembleDebug[0m
-2026-10-07T03:52:02.3693534Z shell: /usr/bin/bash -e {0}
-2026-10-07T03:52:02.3693805Z env:
-2026-10-07T03:52:02.3694099Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
-2026-10-07T03:52:02.3694538Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
-2026-10-07T03:52:02.3694877Z ##[endgroup]
-2026-10-07T03:52:03.6879836Z Error: Could not find or load main class org.gradle.wrapper.GradleWrapperMain
-2026-10-07T03:52:03.6880935Z Caused by: java.lang.ClassNotFoundException: org.gradle.wrapper.GradleWrapperMain
-2026-10-07T03:52:03.7013839Z ##[error]Process completed with exit code 1.
-2026-10-07T03:52:03.7137291Z Post job cleanup.
-2026-10-07T03:52:03.8194536Z (node:2130) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
-2026-10-07T03:52:03.8195298Z (Use `node --trace-deprecation ...` to show where the warning was created)
-2026-10-07T03:52:03.8326175Z Post job cleanup.
-2026-10-07T03:52:03.9050246Z [command]/usr/bin/git version
-2026-10-07T03:52:03.9083165Z git version 2.55.0
-2026-10-07T03:52:03.9113350Z Temporarily overriding HOME='/home/runner/work/_temp/e33fc56c-a5f6-4a93-9c5f-a612615d5209' before making global git config changes
-2026-10-07T03:52:03.9114576Z Adding repository directory to the temporary git global config as a safe directory
-2026-10-07T03:52:03.9118412Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/learning_remote/learning_remote
-2026-10-07T03:52:03.9237619Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
-2026-10-07T03:52:03.9270327Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
-2026-10-07T03:52:03.9442660Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
-2026-10-07T03:52:03.9464346Z http.https://github.com/.extraheader
-2026-10-07T03:52:03.9477613Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
-2026-10-07T03:52:03.9511793Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
-2026-10-07T03:52:03.9676443Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
-2026-10-07T03:52:03.9702591Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
-2026-10-07T03:52:03.9972412Z Cleaning up orphan processes
-2026-10-07T03:52:04.0148412Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
+﻿2026-10-07T05:15:33.8843161Z Current runner version: '2.337.0'
+2026-10-07T05:15:33.8860425Z ##[group]Runner Image Provisioner
+2026-10-07T05:15:33.8861168Z Hosted Compute Agent
+2026-10-07T05:15:33.8861620Z Version: 20260901.588
+2026-10-07T05:15:33.8862052Z Commit: f88ec8081b781fac6c440065ac7ff9e710ce3d0b
+2026-10-07T05:15:33.8862556Z Build Date: 2026-09-01T19:56:44Z
+2026-10-07T05:15:33.8863070Z Worker ID: {69e82b75-1557-4290-ad1b-e2b6b0470f16}
+2026-10-07T05:15:33.8863592Z Azure Region: centralus
+2026-10-07T05:15:33.8864000Z ##[endgroup]
+2026-10-07T05:15:33.8864975Z ##[group]Operating System
+2026-10-07T05:15:33.8865403Z Ubuntu
+2026-10-07T05:15:33.8865856Z 24.04.5
+2026-10-07T05:15:33.8866288Z LTS
+2026-10-07T05:15:33.8866843Z ##[endgroup]
+2026-10-07T05:15:33.8867279Z ##[group]Runner Image
+2026-10-07T05:15:33.8867750Z Image: ubuntu-24.04
+2026-10-07T05:15:33.8868458Z Version: 20260927.320.1
+2026-10-07T05:15:33.8869368Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260927.320/images/ubuntu/Ubuntu2404-Readme.md
+2026-10-07T05:15:33.8870441Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260927.320
+2026-10-07T05:15:33.8871104Z ##[endgroup]
+2026-10-07T05:15:33.8871976Z ##[group]GITHUB_TOKEN Permissions
+2026-10-07T05:15:33.8873730Z Contents: read
+2026-10-07T05:15:33.8874158Z Metadata: read
+2026-10-07T05:15:33.8874601Z Packages: read
+2026-10-07T05:15:33.8874973Z ##[endgroup]
+2026-10-07T05:15:33.8876522Z Secret source: Actions
+2026-10-07T05:15:33.8877508Z Cache mode: write
+2026-10-07T05:15:33.8878074Z Prepare workflow directory
+2026-10-07T05:15:33.9121649Z Prepare all required actions
+2026-10-07T05:15:33.9158166Z Getting action download info
+2026-10-07T05:15:34.1710049Z Download action repository 'actions/checkout@v4' (SHA:11d5960a326750d5838078e36cf38b85af677262)
+2026-10-07T05:15:34.2712971Z Download action repository 'actions/setup-java@v4' (SHA:cf277c60eb25467037889841efdb72551f06f6c3)
+2026-10-07T05:15:34.8960826Z Download action repository 'gradle/gradle-build-action@v3' (SHA:ac2d340dc04d9e1113182899e983b5400c17cda1)
+2026-10-07T05:15:35.2012978Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2026-10-07T05:15:35.3221790Z Download action repository 'softprops/action-gh-release@v2' (SHA:3bb12739c298aeb8a4eeaf626c5b8d85266b0e65)
+2026-10-07T05:15:35.6941432Z Getting action download info
+2026-10-07T05:15:35.7976481Z Download action repository 'gradle/actions@v3.5.0' (SHA:d9c87d481d55275bb5441eef3fe0e46805f9ef70)
+2026-10-07T05:15:36.8347217Z Complete job name: build
+2026-10-07T05:15:36.8849710Z ##[group]Run actions/checkout@v4
+2026-10-07T05:15:36.8850180Z with:
+2026-10-07T05:15:36.8850422Z   repository: zenghlzenghl/learning_remote
+2026-10-07T05:15:36.8852268Z   token: ***
+2026-10-07T05:15:36.8852487Z   ssh-strict: true
+2026-10-07T05:15:36.8852693Z   ssh-user: git
+2026-10-07T05:15:36.8852956Z   persist-credentials: true
+2026-10-07T05:15:36.8853199Z   clean: true
+2026-10-07T05:15:36.8853460Z   sparse-checkout-cone-mode: true
+2026-10-07T05:15:36.8853731Z   fetch-depth: 1
+2026-10-07T05:15:36.8853951Z   fetch-tags: false
+2026-10-07T05:15:36.8854190Z   show-progress: true
+2026-10-07T05:15:36.8854416Z   lfs: false
+2026-10-07T05:15:36.8854672Z   submodules: false
+2026-10-07T05:15:36.8854923Z   set-safe-directory: true
+2026-10-07T05:15:36.8855191Z   allow-unsafe-pr-checkout: false
+2026-10-07T05:15:36.8855532Z ##[endgroup]
+2026-10-07T05:15:36.9657985Z Syncing repository: zenghlzenghl/learning_remote
+2026-10-07T05:15:36.9659669Z ##[group]Getting Git version info
+2026-10-07T05:15:36.9660445Z Working directory is '/home/runner/work/learning_remote/learning_remote'
+2026-10-07T05:15:36.9661383Z [command]/usr/bin/git version
+2026-10-07T05:15:36.9720889Z git version 2.55.0
+2026-10-07T05:15:36.9738276Z ##[endgroup]
+2026-10-07T05:15:36.9750091Z Temporarily overriding HOME='/home/runner/work/_temp/b44a9a42-b486-48f9-ac69-5627aee23d5b' before making global git config changes
+2026-10-07T05:15:36.9751065Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T05:15:36.9756514Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/learning_remote/learning_remote
+2026-10-07T05:15:36.9800074Z Deleting the contents of '/home/runner/work/learning_remote/learning_remote'
+2026-10-07T05:15:36.9804420Z ##[group]Initializing the repository
+2026-10-07T05:15:36.9808491Z [command]/usr/bin/git init /home/runner/work/learning_remote/learning_remote
+2026-10-07T05:15:36.9916468Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-10-07T05:15:36.9917425Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-10-07T05:15:36.9918045Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-10-07T05:15:36.9918574Z hint: call:
+2026-10-07T05:15:36.9919134Z hint:
+2026-10-07T05:15:36.9919588Z hint: 	git config --global init.defaultBranch <name>
+2026-10-07T05:15:36.9919983Z hint:
+2026-10-07T05:15:36.9920363Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-10-07T05:15:36.9921141Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-10-07T05:15:36.9921651Z hint:
+2026-10-07T05:15:36.9921947Z hint: 	git branch -m <name>
+2026-10-07T05:15:36.9922269Z hint:
+2026-10-07T05:15:36.9922698Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-10-07T05:15:36.9923617Z Initialized empty Git repository in /home/runner/work/learning_remote/learning_remote/.git/
+2026-10-07T05:15:36.9928956Z [command]/usr/bin/git remote add origin https://github.com/zenghlzenghl/learning_remote
+2026-10-07T05:15:36.9970621Z ##[endgroup]
+2026-10-07T05:15:36.9971220Z ##[group]Disabling automatic garbage collection
+2026-10-07T05:15:36.9973319Z [command]/usr/bin/git config --local gc.auto 0
+2026-10-07T05:15:37.0000313Z ##[endgroup]
+2026-10-07T05:15:37.0000922Z ##[group]Setting up auth
+2026-10-07T05:15:37.0006130Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T05:15:37.0035645Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T05:15:37.0318576Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T05:15:37.0340064Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T05:15:37.0483508Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T05:15:37.0508331Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T05:15:37.0657698Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-10-07T05:15:37.0687483Z ##[endgroup]
+2026-10-07T05:15:37.0687834Z ##[group]Fetching the repository
+2026-10-07T05:15:37.0694854Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +778e294c22feb0134c6a10d96f505fc8f5f37487:refs/remotes/origin/main
+2026-10-07T05:15:37.3794303Z From https://github.com/zenghlzenghl/learning_remote
+2026-10-07T05:15:37.3797156Z  * [new ref]         778e294c22feb0134c6a10d96f505fc8f5f37487 -> origin/main
+2026-10-07T05:15:37.3799141Z ##[endgroup]
+2026-10-07T05:15:37.3799678Z ##[group]Determining the checkout info
+2026-10-07T05:15:37.3801876Z ##[endgroup]
+2026-10-07T05:15:37.3807363Z [command]/usr/bin/git sparse-checkout disable
+2026-10-07T05:15:37.3894559Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-10-07T05:15:37.3921286Z ##[group]Checking out the ref
+2026-10-07T05:15:37.3939482Z [command]/usr/bin/git checkout --progress --force -B main refs/remotes/origin/main
+2026-10-07T05:15:37.3993456Z Switched to a new branch 'main'
+2026-10-07T05:15:37.3997331Z branch 'main' set up to track 'origin/main'.
+2026-10-07T05:15:37.4000956Z ##[endgroup]
+2026-10-07T05:15:37.4032565Z [command]/usr/bin/git log -1 --format=%H
+2026-10-07T05:15:37.4050002Z 778e294c22feb0134c6a10d96f505fc8f5f37487
+2026-10-07T05:15:37.4258810Z ##[group]Run actions/setup-java@v4
+2026-10-07T05:15:37.4259038Z with:
+2026-10-07T05:15:37.4259195Z   java-version: 17
+2026-10-07T05:15:37.4259374Z   distribution: temurin
+2026-10-07T05:15:37.4259543Z   java-package: jdk
+2026-10-07T05:15:37.4259702Z   check-latest: false
+2026-10-07T05:15:37.4259862Z   server-id: github
+2026-10-07T05:15:37.4260034Z   server-username: GITHUB_ACTOR
+2026-10-07T05:15:37.4260223Z   server-password: GITHUB_TOKEN
+2026-10-07T05:15:37.4260403Z   overwrite-settings: true
+2026-10-07T05:15:37.4260574Z   job-status: success
+2026-10-07T05:15:37.4262166Z   token: ***
+2026-10-07T05:15:37.4262319Z ##[endgroup]
+2026-10-07T05:15:37.5460773Z ##[warning]setup-java v4 is deprecated and will no longer receive updates. Please migrate to actions/setup-java@v5.
+2026-10-07T05:15:37.5466181Z ##[group]Installed distributions
+2026-10-07T05:15:37.5579133Z Resolved Java 17.0.20+1 from tool-cache
+2026-10-07T05:15:37.5579445Z Setting Java 17.0.20+1 as the default
+2026-10-07T05:15:37.5586372Z (node:2097) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T05:15:37.5588716Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T05:15:37.5589094Z Creating toolchains.xml for JDK version 17 from temurin
+2026-10-07T05:15:37.5637099Z Writing to /home/runner/.m2/toolchains.xml
+2026-10-07T05:15:37.5637335Z 
+2026-10-07T05:15:37.5637496Z Java configuration:
+2026-10-07T05:15:37.5637735Z   Distribution: temurin
+2026-10-07T05:15:37.5637970Z   Version: 17.0.20+1
+2026-10-07T05:15:37.5638282Z   Path: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:37.5638531Z 
+2026-10-07T05:15:37.5638854Z ##[endgroup]
+2026-10-07T05:15:37.5653949Z Creating settings.xml with server-id: github
+2026-10-07T05:15:37.5670732Z Writing to /home/runner/.m2/settings.xml
+2026-10-07T05:15:37.6014204Z ##[group]Run gradle/gradle-build-action@v3
+2026-10-07T05:15:37.6014440Z with:
+2026-10-07T05:15:37.6014599Z   gradle-version: 8.2
+2026-10-07T05:15:37.6014775Z   cache-disabled: false
+2026-10-07T05:15:37.6014955Z   cache-read-only: false
+2026-10-07T05:15:37.6015139Z   cache-write-only: false
+2026-10-07T05:15:37.6015335Z   cache-overwrite-existing: false
+2026-10-07T05:15:37.6015580Z   gradle-home-cache-includes: caches
+notifications
+
+2026-10-07T05:15:37.6015838Z   gradle-home-cache-cleanup: false
+2026-10-07T05:15:37.6016048Z   add-job-summary: always
+2026-10-07T05:15:37.6016244Z   add-job-summary-as-pr-comment: never
+2026-10-07T05:15:37.6016459Z   dependency-graph: disabled
+2026-10-07T05:15:37.6016939Z   dependency-graph-continue-on-failure: true
+2026-10-07T05:15:37.6017185Z   build-scan-publish: false
+2026-10-07T05:15:37.6017381Z   validate-wrappers: false
+2026-10-07T05:15:37.6017585Z   generate-job-summary: true
+2026-10-07T05:15:37.6017789Z   gradle-home-cache-strict-match: false
+2026-10-07T05:15:37.6018068Z   workflow-job-context: null
+2026-10-07T05:15:37.6019790Z   github-token: ***
+2026-10-07T05:15:37.6019951Z env:
+2026-10-07T05:15:37.6020183Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:37.6020598Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:37.6020891Z ##[endgroup]
+2026-10-07T05:15:37.6066913Z ##[start-action display=Setup Gradle;id=__gradle_gradle-build-action.setup-gradle]
+2026-10-07T05:15:37.6162851Z ##[group]Run gradle/actions/setup-gradle@v3.5.0
+2026-10-07T05:15:37.6163125Z with:
+2026-10-07T05:15:37.6163309Z   gradle-version: 8.2
+2026-10-07T05:15:37.6163496Z   cache-disabled: false
+2026-10-07T05:15:37.6163692Z   cache-read-only: false
+2026-10-07T05:15:37.6163892Z   cache-write-only: false
+2026-10-07T05:15:37.6164098Z   cache-overwrite-existing: false
+2026-10-07T05:15:37.6164478Z   gradle-home-cache-includes: caches
+notifications
+
+2026-10-07T05:15:37.6164769Z   gradle-home-cache-cleanup: false
+2026-10-07T05:15:37.6164993Z   add-job-summary: always
+2026-10-07T05:15:37.6165213Z   add-job-summary-as-pr-comment: never
+2026-10-07T05:15:37.6165450Z   dependency-graph: disabled
+2026-10-07T05:15:37.6165683Z   dependency-graph-continue-on-failure: true
+2026-10-07T05:15:37.6165930Z   build-scan-publish: false
+2026-10-07T05:15:37.6166140Z   validate-wrappers: false
+2026-10-07T05:15:37.6166420Z   generate-job-summary: true
+2026-10-07T05:15:37.6166780Z   gradle-home-cache-strict-match: false
+2026-10-07T05:15:37.6167046Z   workflow-job-context: null
+2026-10-07T05:15:37.6168938Z   github-token: ***
+2026-10-07T05:15:37.6169112Z env:
+2026-10-07T05:15:37.6169375Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:37.6169765Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:37.6170103Z   GRADLE_ACTION_ID: gradle/gradle-build-action
+2026-10-07T05:15:37.6170350Z ##[endgroup]
+2026-10-07T05:15:37.7501054Z (node:2109) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T05:15:37.7501594Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T05:15:39.4507862Z Merged default JDK locations into /home/runner/.m2/toolchains.xml
+2026-10-07T05:15:39.4509093Z ##[group]Restore Gradle state from cache
+2026-10-07T05:15:39.5435293Z ##[warning]Failed to restore gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-778e294c22feb0134c6a10d96f505fc8f5f37487: Error: Cache service responded with 400
+2026-10-07T05:15:39.5505055Z Gradle User Home cache not found. Will initialize empty.
+2026-10-07T05:15:39.5505536Z ##[endgroup]
+2026-10-07T05:15:39.6283945Z ##[group]Provision Gradle 8.2
+2026-10-07T05:15:39.6850725Z ##[warning]Restore Gradle distribution 8.2 failed: Error: Cache service responded with 400
+2026-10-07T05:15:39.6851784Z Gradle distribution 8.2 not found in cache. Will download.
+2026-10-07T05:15:40.4108507Z Downloaded https://services.gradle.org/distributions/gradle-8.2-bin.zip to /home/runner/gradle-installations/downloads/gradle-8.2-bin.zip (size 128689645)
+2026-10-07T05:15:40.4186296Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/learning_remote/learning_remote --files-from manifest.txt --use-compress-program zstdmt
+2026-10-07T05:15:40.5784982Z ##[warning]Save Gradle distribution 8.2 failed: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>0fNXFagAAAAD1qhdtX/QFTaxLQNHb2k0OQ0gxQUEyMDMwODEzMDUyAEVkZ2U=
+2026-10-07T05:15:40.5798186Z [command]/usr/bin/unzip -o -q /home/runner/gradle-installations/downloads/gradle-8.2-bin.zip
+2026-10-07T05:15:41.3435986Z Extracted Gradle 8.2 to /home/runner/gradle-installations/installs/gradle-8.2
+2026-10-07T05:15:41.3437181Z Provisioned Gradle executable /home/runner/gradle-installations/installs/gradle-8.2/bin/gradle
+2026-10-07T05:15:41.3438119Z ##[endgroup]
+2026-10-07T05:15:41.3526065Z ##[end-action id=__gradle_gradle-build-action.setup-gradle;outcome=success;conclusion=success;duration_ms=3745]
+2026-10-07T05:15:41.3591674Z ##[group]Run gradle wrapper --gradle-version 8.2
+2026-10-07T05:15:41.3591996Z [36;1mgradle wrapper --gradle-version 8.2[0m
+2026-10-07T05:15:41.3592228Z [36;1mchmod +x gradlew[0m
+2026-10-07T05:15:41.3783946Z shell: /usr/bin/bash -e {0}
+2026-10-07T05:15:41.3784173Z env:
+2026-10-07T05:15:41.3784413Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:41.3784777Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:15:41.3785099Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-10-07T05:15:41.3785331Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-10-07T05:15:41.3785644Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-10-07T05:15:41.3786158Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-10-07T05:15:41.3786395Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-10-07T05:15:41.3786588Z ##[endgroup]
+2026-10-07T05:15:42.3331642Z 
+2026-10-07T05:15:42.3332557Z Welcome to Gradle 8.2!
+2026-10-07T05:15:42.3333071Z 
+2026-10-07T05:15:42.3333574Z Here are the highlights of this release:
+2026-10-07T05:15:42.3340985Z  - Kotlin DSL: new reference documentation, assignment syntax by default
+2026-10-07T05:15:42.3343560Z  - Kotlin DSL is now the default with Gradle init
+2026-10-07T05:15:42.3344031Z  - Improved suggestions to resolve errors in console output
+2026-10-07T05:15:42.3344408Z 
+2026-10-07T05:15:42.3344814Z For more details see https://docs.gradle.org/8.2/release-notes.html
+2026-10-07T05:15:42.3345269Z 
+2026-10-07T05:15:42.8321932Z Starting a Gradle Daemon (subsequent builds will be faster)
+2026-10-07T05:16:14.8355729Z > Task :wrapper
+2026-10-07T05:16:14.9286409Z 
+2026-10-07T05:16:14.9296413Z BUILD SUCCESSFUL in 33s
+2026-10-07T05:16:14.9299824Z 1 actionable task: 1 executed
+2026-10-07T05:16:15.2545410Z ##[group]Run ./gradlew assembleDebug --no-daemon
+2026-10-07T05:16:15.2545814Z [36;1m./gradlew assembleDebug --no-daemon[0m
+2026-10-07T05:16:15.2578625Z shell: /usr/bin/bash -e {0}
+2026-10-07T05:16:15.2578901Z env:
+2026-10-07T05:16:15.2579211Z   JAVA_HOME: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:16:15.2579658Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Temurin-Hotspot_jdk/17.0.20-1/x64
+2026-10-07T05:16:15.2580041Z   GRADLE_BUILD_ACTION_SETUP_COMPLETED: true
+2026-10-07T05:16:15.2580410Z   GRADLE_BUILD_ACTION_CACHE_RESTORED: true
+2026-10-07T05:16:15.2580804Z   DEVELOCITY_INJECTION_INIT_SCRIPT_NAME: gradle-actions.inject-develocity.init.gradle
+2026-10-07T05:16:15.2581252Z   DEVELOCITY_AUTO_INJECTION_CUSTOM_VALUE: gradle-actions
+2026-10-07T05:16:15.2581587Z   GITHUB_DEPENDENCY_GRAPH_ENABLED: false
+2026-10-07T05:16:15.2581847Z ##[endgroup]
+2026-10-07T05:16:15.3373220Z Downloading https://services.gradle.org/distributions/gradle-8.2-bin.zip
+2026-10-07T05:16:16.3277863Z ............10%............20%............30%.............40%............50%............60%............70%.............80%............90%............100%
+2026-10-07T05:16:17.1988857Z To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.2/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+2026-10-07T05:16:17.8951994Z Daemon will be stopped at the end of the build 
+2026-10-07T05:16:22.9964472Z > Task :app:preBuild UP-TO-DATE
+2026-10-07T05:16:23.0007857Z > Task :app:preDebugBuild UP-TO-DATE
+2026-10-07T05:16:23.0020837Z > Task :app:mergeDebugNativeDebugMetadata NO-SOURCE
+2026-10-07T05:16:31.3951507Z > Task :app:dataBindingMergeDependencyArtifactsDebug
+2026-10-07T05:16:31.3955318Z > Task :app:generateDebugResValues
+2026-10-07T05:16:31.3956155Z > Task :app:generateDebugResources
+2026-10-07T05:16:33.2987235Z > Task :app:packageDebugResources
+2026-10-07T05:16:33.9949071Z > Task :app:mergeDebugResources
+2026-10-07T05:16:34.2968483Z > Task :app:parseDebugLocalResources
+2026-10-07T05:16:34.3968070Z > Task :app:checkDebugAarMetadata
+2026-10-07T05:16:34.5949946Z > Task :app:dataBindingGenBaseClassesDebug
+2026-10-07T05:16:34.6037892Z > Task :app:mapDebugSourceSetPaths
+2026-10-07T05:16:34.6038675Z > Task :app:createDebugCompatibleScreenManifests
+2026-10-07T05:16:34.6068035Z > Task :app:extractDeepLinksDebug
+2026-10-07T05:16:34.8949406Z > Task :app:processDebugMainManifest
+2026-10-07T05:16:34.8978140Z > Task :app:processDebugManifest
+2026-10-07T05:16:34.9949727Z > Task :app:javaPreCompileDebug
+2026-10-07T05:16:34.9956912Z > Task :app:mergeDebugShaders
+2026-10-07T05:16:34.9957685Z > Task :app:compileDebugShaders NO-SOURCE
+2026-10-07T05:16:34.9958303Z > Task :app:generateDebugAssets UP-TO-DATE
+2026-10-07T05:16:34.9958831Z > Task :app:mergeDebugAssets
+2026-10-07T05:16:34.9959338Z > Task :app:compressDebugAssets
+2026-10-07T05:16:34.9960092Z > Task :app:desugarDebugFileDependencies
+2026-10-07T05:16:36.1955387Z > Task :app:mergeDebugJniLibFolders
+2026-10-07T05:16:36.1957501Z > Task :app:processDebugManifestForPackage
+2026-10-07T05:16:36.1958225Z > Task :app:checkDebugDuplicateClasses
+2026-10-07T05:16:37.8960672Z > Task :app:processDebugResources
+2026-10-07T05:16:57.6968405Z > Task :app:mergeExtDexDebug
+2026-10-07T05:16:58.3968614Z > Task :app:mergeDebugNativeLibs NO-SOURCE
+2026-10-07T05:16:58.3997936Z > Task :app:stripDebugDebugSymbols NO-SOURCE
+2026-10-07T05:16:58.4020696Z > Task :app:mergeLibDexDebug
+2026-10-07T05:16:58.8949418Z > Task :app:validateSigningDebug
+2026-10-07T05:16:58.8950202Z > Task :app:writeDebugAppMetadata
+2026-10-07T05:16:58.8950686Z > Task :app:writeDebugSigningConfigVersions
+2026-10-07T05:17:04.2973938Z 
+2026-10-07T05:17:04.2974940Z > Task :app:compileDebugKotlin FAILED
+2026-10-07T05:17:04.3028292Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:67:55 Expecting ')'
+2026-10-07T05:17:04.3058594Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:67:57 Unexpected tokens (use ';' to separate expressions on the same line)
+2026-10-07T05:17:04.3067893Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:198:57 Expecting ')'
+2026-10-07T05:17:04.3088069Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:198:59 Unexpected tokens (use ';' to separate expressions on the same line)
+2026-10-07T05:17:04.3089606Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:67:37 Type mismatch: inferred type is Boolean but String was expected
+2026-10-07T05:17:04.3091098Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/learningremote/MainActivity.kt:198:32 Type mismatch: inferred type is Boolean but Int was expected
+2026-10-07T05:17:04.3092589Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:16:34 Unresolved reference: databinding
+2026-10-07T05:17:04.3093837Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:24:35 Unresolved reference: ActivityMainBinding
+2026-10-07T05:17:04.3095236Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:37:19 Unresolved reference: ActivityMainBinding
+2026-10-07T05:17:04.3117845Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:91:58 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-10-07T05:17:04.3138026Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:91:61 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-10-07T05:17:04.3158029Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:114:49 Variable expected
+2026-10-07T05:17:04.3195276Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:129:28 Not enough information to infer type variable K
+2026-10-07T05:17:04.3221922Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:142:22 Overload resolution ambiguity: 
+2026-10-07T05:17:04.3230895Z public inline fun <T> Iterable<TypeVariable(T)>.forEach(action: (TypeVariable(T)) -> Unit): Unit defined in kotlin.collections
+2026-10-07T05:17:04.3232045Z public inline fun <K, V> Map<out TypeVariable(K), TypeVariable(V)>.forEach(action: (Map.Entry<TypeVariable(K), TypeVariable(V)>) -> Unit): Unit defined in kotlin.collections
+2026-10-07T05:17:04.3233353Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:142:32 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-10-07T05:17:04.3234817Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:162:41 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3236078Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:163:43 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3237328Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:197:49 Unresolved reference: R
+2026-10-07T05:17:04.3244728Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:198:72 Unresolved reference: R
+2026-10-07T05:17:04.3246286Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:199:72 Unresolved reference: R
+2026-10-07T05:17:04.3247730Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:200:72 Unresolved reference: R
+2026-10-07T05:17:04.3249128Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:201:57 Unresolved reference: R
+2026-10-07T05:17:04.3250450Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:202:72 Unresolved reference: R
+2026-10-07T05:17:04.3251752Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:204:18 Variable expected
+2026-10-07T05:17:04.3253003Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:205:18 Variable expected
+2026-10-07T05:17:04.3254214Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:206:18 Variable expected
+2026-10-07T05:17:04.3255524Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:212:31 Overload resolution ambiguity: 
+2026-10-07T05:17:04.3256584Z public open fun rgb(p0: Float, p1: Float, p2: Float): Int defined in android.graphics.Color
+2026-10-07T05:17:04.3257565Z public open fun rgb(p0: Int, p1: Int, p2: Int): Int defined in android.graphics.Color
+2026-10-07T05:17:04.3258518Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:214:21 Variable expected
+2026-10-07T05:17:04.3259745Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:245:14 Overload resolution ambiguity: 
+2026-10-07T05:17:04.3260891Z public open fun setView(p0: View!): AlertDialog.Builder! defined in androidx.appcompat.app.AlertDialog.Builder
+2026-10-07T05:17:04.3261886Z public open fun setView(p0: Int): AlertDialog.Builder! defined in androidx.appcompat.app.AlertDialog.Builder
+2026-10-07T05:17:04.3263164Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:246:43 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-10-07T05:17:04.3264711Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:246:46 Cannot infer a type for this parameter. Please specify it explicitly.
+2026-10-07T05:17:04.3266161Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:251:67 Overload resolution ambiguity: 
+2026-10-07T05:17:04.3267386Z public open fun rgb(p0: Float, p1: Float, p2: Float): Int defined in android.graphics.Color
+2026-10-07T05:17:04.3268112Z public open fun rgb(p0: Int, p1: Int, p2: Int): Int defined in android.graphics.Color
+2026-10-07T05:17:04.3269356Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:278:33 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3270649Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:279:35 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3271916Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:314:29 Variable expected
+2026-10-07T05:17:04.3273151Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:316:29 Variable expected
+2026-10-07T05:17:04.3274371Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:331:33 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3275769Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:332:35 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3277168Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:423:29 Variable expected
+2026-10-07T05:17:04.3278495Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:424:33 Variable expected
+2026-10-07T05:17:04.3279679Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:427:46 Unresolved reference: R
+2026-10-07T05:17:04.3280901Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:429:46 Unresolved reference: R
+2026-10-07T05:17:04.3282222Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:432:35 Variable expected
+2026-10-07T05:17:04.3283448Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:433:37 Variable expected
+2026-10-07T05:17:04.3284677Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:439:30 Variable expected
+2026-10-07T05:17:04.3285944Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:440:31 Variable expected
+2026-10-07T05:17:04.3287253Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:441:32 Variable expected
+2026-10-07T05:17:04.3288477Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:444:36 Variable expected
+2026-10-07T05:17:04.3289684Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:448:29 Variable expected
+2026-10-07T05:17:04.3290888Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/MainActivity.kt:465:29 Variable expected
+2026-10-07T05:17:04.3292091Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:3:19 Unresolved reference: gson
+2026-10-07T05:17:04.3293523Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:6:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3294947Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:7:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3296384Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:8:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3297892Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:9:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3299493Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:10:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3300913Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:11:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3302292Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:30:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3303615Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:31:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3305026Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/model/LedState.kt:32:6 Unresolved reference: SerializedName
+2026-10-07T05:17:04.3306521Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:4:8 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3308084Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:5:8 Unresolved reference: retrofit2
+2026-10-07T05:17:04.3309427Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:6:8 Unresolved reference: retrofit2
+2026-10-07T05:17:04.3310740Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:10:6 Unresolved reference: GET
+2026-10-07T05:17:04.3312078Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:11:30 Unresolved reference: Response
+2026-10-07T05:17:04.3313364Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:13:6 Unresolved reference: POST
+2026-10-07T05:17:04.3314760Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:14:27 Unresolved reference: Response
+2026-10-07T05:17:04.3316096Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:16:6 Unresolved reference: POST
+2026-10-07T05:17:04.3317546Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:17:28 Unresolved reference: Response
+2026-10-07T05:17:04.3318860Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:19:6 Unresolved reference: POST
+2026-10-07T05:17:04.3320163Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:20:27 Unresolved reference: Body
+2026-10-07T05:17:04.3321665Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:20:43 Unresolved reference: RequestBody
+2026-10-07T05:17:04.3323004Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:20:57 Unresolved reference: Response
+2026-10-07T05:17:04.3324381Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:22:6 Unresolved reference: POST
+2026-10-07T05:17:04.3325669Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:23:32 Unresolved reference: Body
+2026-10-07T05:17:04.3327143Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:23:69 Unresolved reference: Response
+2026-10-07T05:17:04.3328509Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:25:6 Unresolved reference: POST
+2026-10-07T05:17:04.3329911Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:26:26 Unresolved reference: Body
+2026-10-07T05:17:04.3331252Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/ApiService.kt:26:51 Unresolved reference: Response
+2026-10-07T05:17:04.3332706Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:3:8 Unresolved reference: okhttp3
+2026-10-07T05:17:04.3334118Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:4:8 Unresolved reference: retrofit2
+2026-10-07T05:17:04.3335704Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:5:8 Unresolved reference: retrofit2
+2026-10-07T05:17:04.3337359Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:12:26 Unresolved reference: OkHttpClient
+2026-10-07T05:17:04.3338901Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:32:26 Unresolved reference: Retrofit
+2026-10-07T05:17:04.3340369Z e: file:///home/runner/work/learning_remote/learning_remote/app/src/main/java/com/example/ledcontroller/network/LedApiClient.kt:35:38 Unresolved reference: GsonConverterFactory
+2026-10-07T05:17:04.4948426Z 
+2026-10-07T05:17:04.5012079Z FAILURE: Build failed with an exception.
+2026-10-07T05:17:04.5012601Z 27 actionable tasks: 27 executed
+2026-10-07T05:17:04.5025680Z 
+2026-10-07T05:17:04.5029756Z * What went wrong:
+2026-10-07T05:17:04.5030276Z Execution failed for task ':app:compileDebugKotlin'.
+2026-10-07T05:17:04.5031390Z > A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+2026-10-07T05:17:04.5032284Z    > Compilation error. See log for more details
+2026-10-07T05:17:04.5032632Z 
+2026-10-07T05:17:04.5032939Z * Try:
+2026-10-07T05:17:04.5033513Z > Run with --stacktrace option to get the stack trace.
+2026-10-07T05:17:04.5040372Z > Run with --info or --debug option to get more log output.
+2026-10-07T05:17:04.5041144Z > Run with --scan to get full insights.
+2026-10-07T05:17:04.5041671Z > Get more help at https://help.gradle.org.
+2026-10-07T05:17:04.5042023Z 
+2026-10-07T05:17:04.5042341Z BUILD FAILED in 49s
+2026-10-07T05:17:04.8524209Z ##[error]Process completed with exit code 1.
+2026-10-07T05:17:04.8754556Z Post job cleanup.
+2026-10-07T05:17:04.8760142Z ##[start-action display=Setup Gradle;id=__116f8c46-ca3a-4162-9627-d03cd81b9204.setup-gradle]
+2026-10-07T05:17:04.8850074Z Post job cleanup.
+2026-10-07T05:17:05.0363399Z ##[warning]This job uses deprecated functionality from the 'gradle/gradle-build-action' action. Consult the Job Summary for more details.
+2026-10-07T05:17:05.0364855Z DEPRECATION: The action `gradle/gradle-build-action` has been replaced by `gradle/actions/setup-gradle`. See https://github.com/gradle/actions/blob/main/docs/deprecation-upgrade-guide.md#the-action-gradlegradle-build-action-has-been-replaced-by-gradleactionssetup-gradle
+2026-10-07T05:17:05.0365848Z In post-action step
+2026-10-07T05:17:05.0370035Z Stopping all Gradle daemons before saving Gradle User Home state
+2026-10-07T05:17:05.0370502Z Stopping Gradle daemons for /home/runner/gradle-installations/installs/gradle-8.2
+2026-10-07T05:17:05.0379304Z Stopping Gradle daemons for /home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2
+2026-10-07T05:17:05.0380688Z (node:2565) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T05:17:05.0381298Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T05:17:05.0386016Z [command]/home/runner/gradle-installations/installs/gradle-8.2/bin/gradle --stop
+2026-10-07T05:17:05.0419203Z [command]/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta/gradle-8.2/bin/gradle --stop
+2026-10-07T05:17:06.1158459Z Stopping Daemon(s)
+2026-10-07T05:17:06.1468396Z 1 Daemon stopped
+2026-10-07T05:17:06.1615873Z Stopping Daemon(s)
+2026-10-07T05:17:06.1616546Z 1 Daemon stopped
+2026-10-07T05:17:06.1697209Z ##[group]Caching Gradle state
+2026-10-07T05:17:06.1936933Z Caching wrapper-zips with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and cache key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342
+2026-10-07T05:17:06.2030315Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/learning_remote/learning_remote --files-from manifest.txt --use-compress-program zstdmt
+2026-10-07T05:17:06.3918911Z Caching dependencies with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and cache key: gradle-dependencies-v1-facf2b2f798b564c27b8b2e067844777
+2026-10-07T05:17:06.4234320Z Caching instrumented-jars with path '/home/runner/.gradle/caches/jars-*/*/' and cache key: gradle-instrumented-jars-v1-a8f142ae84d24e6167e99de379893015
+2026-10-07T05:17:06.4829435Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/learning_remote/learning_remote --files-from manifest.txt --use-compress-program zstdmt
+2026-10-07T05:17:06.5906131Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/learning_remote/learning_remote --files-from manifest.txt --use-compress-program zstdmt
+2026-10-07T05:17:06.9352259Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/wrapper/dists/gradle-8.2-bin/bbg7u40eoinfdyxsxr3z4i7ta' and key: gradle-wrapper-zips-v1-d75ab2e302ad9e0b00dcd53244709342: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>00tXFagAAAABmg73I/hgMS6aTDAS5PgcaQ0gxQUEyMDMwODE0MDQwAEVkZ2U=
+2026-10-07T05:17:07.4405560Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/modules-*/files-*/*/*/*/*' and key: gradle-dependencies-v1-facf2b2f798b564c27b8b2e067844777: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>009XFagAAAABE1L1UrY6aRpuM3YFXcXEjQ0gxQUEyMDMwODEzMDMxAEVkZ2U=
+2026-10-07T05:17:07.7024020Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches/jars-*/*/' and key: gradle-instrumented-jars-v1-a8f142ae84d24e6167e99de379893015: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>009XFagAAAADHPKF8OQfURp4vnPoeUYZ/Q0gxQUEyMDMwODEzMDYyAEVkZ2U=
+2026-10-07T05:17:07.8228727Z Caching Gradle User Home with cache key: gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-778e294c22feb0134c6a10d96f505fc8f5f37487
+2026-10-07T05:17:07.8313626Z [command]/usr/bin/tar --posix -cf cache.tzst --exclude cache.tzst -P -C /home/runner/work/learning_remote/learning_remote --files-from manifest.txt --use-compress-program zstdmt
+2026-10-07T05:17:08.1303904Z ##[warning]Failed to save cache entry with path '/home/runner/.gradle/caches,/home/runner/.gradle/notifications,/home/runner/.gradle/.setup-gradle' and key: gradle-home-v1|Linux|build[e080f0fdc288b6f0c5023fd4b86f7a10]-778e294c22feb0134c6a10d96f505fc8f5f37487: Error: <h2>Our services aren't available right now</h2><p>We're working to restore all services as soon as possible. Please check back soon.</p>01NXFagAAAABfuDRQlozdQ6bH20BV/AG7Q0gxQUEyMDMwODEzMDYyAEVkZ2U=
+2026-10-07T05:17:08.1306260Z ##[endgroup]
+2026-10-07T05:17:08.1308169Z Generating Job Summary
+2026-10-07T05:17:08.1318802Z Completed post-action step
+2026-10-07T05:17:08.1395519Z ##[end-action id=__116f8c46-ca3a-4162-9627-d03cd81b9204.setup-gradle;outcome=success;conclusion=success;duration_ms=3263]
+2026-10-07T05:17:08.1460724Z Post job cleanup.
+2026-10-07T05:17:08.2418114Z (node:2690) [DEP0040] DeprecationWarning: The `punycode` module is deprecated. Please use a userland alternative instead.
+2026-10-07T05:17:08.2418846Z (Use `node --trace-deprecation ...` to show where the warning was created)
+2026-10-07T05:17:08.2559298Z Post job cleanup.
+2026-10-07T05:17:08.3191951Z [command]/usr/bin/git version
+2026-10-07T05:17:08.3221926Z git version 2.55.0
+2026-10-07T05:17:08.3246182Z Temporarily overriding HOME='/home/runner/work/_temp/31e4143e-dd74-49a5-a480-fe81faf1d76d' before making global git config changes
+2026-10-07T05:17:08.3247535Z Adding repository directory to the temporary git global config as a safe directory
+2026-10-07T05:17:08.3250226Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/learning_remote/learning_remote
+2026-10-07T05:17:08.3307553Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-10-07T05:17:08.3342767Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-10-07T05:17:08.3486073Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-10-07T05:17:08.3506488Z http.https://github.com/.extraheader
+2026-10-07T05:17:08.3513903Z [command]/usr/bin/git config --local --unset-all http.https://github.com/.extraheader
+2026-10-07T05:17:08.3540548Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-10-07T05:17:08.3717666Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-10-07T05:17:08.3745291Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-10-07T05:17:08.4011146Z Cleaning up orphan processes
+2026-10-07T05:17:08.4356075Z ##[warning]Node.js 20 is deprecated. The following actions target Node.js 20 but are being forced to run on Node.js 24: actions/checkout@v4, actions/setup-java@v4, gradle/actions/setup-gradle@v3.5.0. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/

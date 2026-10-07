@@ -64,7 +64,7 @@ class MainActivity : AppCompatActivity() {
             TabType.IR, TabType.RF -> {
                 binding.recyclerViewSignals.visibility = android.view.View.VISIBLE
                 binding.textViewDecodeResult.visibility = android.view.View.GONE
-                filterSignalsByType(tab == TabType.IR ? "ir" : "rf")
+                filterSignalsByType(if (tab == TabType.IR) "ir" else "rf")
             }
             TabType.DECODE -> {
                 binding.recyclerViewSignals.visibility = android.view.View.GONE
@@ -195,7 +195,7 @@ class MainActivity : AppCompatActivity() {
                 val buttonName = editButtonName.text.toString().trim()
 
                 if (remoteId.isNotEmpty() && buttonName.isNotEmpty()) {
-                    saveSignal(currentTab == TabType.IR ? 0 : 1, remoteId, buttonName)
+                    saveSignal(if (currentTab == TabType.IR) 0 else 1, remoteId, buttonName)
                 } else {
                     Toast.makeText(this, "Please fill all fields", Toast.LENGTH_SHORT).show()
                 }
